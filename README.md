@@ -68,7 +68,7 @@ Votre classe CompteRemunere doit implémenter cette interface (mot clef *impleme
  Créez une nouvelle interface **CompteASeuil** qui respectera les contraintes suivantes :
 
 - Méthodes (au moins) :
-  - **public retirer(double uneValeur): void**
+  - **public retirer(uneValeur: number): void**
   - **public getSeuil(): number**
   - **public setSeuil(unSeuil: number): void**
 
