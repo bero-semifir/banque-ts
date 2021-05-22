@@ -23,6 +23,11 @@ export class CompteASeuil extends Compte implements ICompteASeuil {
         this._seuil = seuil;
     }
 
+    /**
+     * Retire une somme du compte sans dépasser le seuil
+     * @override
+     * @param montant à retirer
+     */
     public retirer(unMontant: number): void {
         if(this.solde - unMontant > this.seuil){
             super.retirer(unMontant);

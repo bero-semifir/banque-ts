@@ -17,6 +17,11 @@ export class CompteASeuilRemunere extends CompteRemunere implements ICompteASeui
         this.seuil = seuil;
     }
 
+    /**
+     * Retire une somme du compte sans dépasser le seuil
+     * @override
+     * @param montant à retirer
+     */
     public retirer(montant: number): void {
         if(this.solde - montant >= this.seuil){
             this.retirer(montant);

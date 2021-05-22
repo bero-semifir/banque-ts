@@ -19,10 +19,17 @@ export class CompteRemunere extends Compte implements ICompteRemunere {
         }
     }
 
+    /**
+     * Retourne les intérets du comptes après calcul avec le taux.
+     * @returns intérets
+     */
     public calculerInterets(): number{
         return this.solde + this.solde*this.getTaux();
     }
 
+    /**
+     * Verse les intérets sur le compte.
+     */
     public verserInterets(): void {
         this._solde += this.calculerInterets();
     }

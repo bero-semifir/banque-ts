@@ -16,7 +16,7 @@ export class Client {
     constructor(nom: string, prenom: string, age: number){
         this._numero = uuid();
         this._nom = nom;
-        this._prenom = nom;
+        this._prenom = prenom;
         this.setAge(age);
     }
 
@@ -54,6 +54,10 @@ export class Client {
         }
     }
 
+    /**
+     * Ajoute un compte au Client.
+     * @param compte à ajouter
+     */
     public ajouterCompte(compte: Compte): void {
         for (let i = 0; i < this.comptes.length; i++) {
             if(this.comptes[i] == null){
@@ -64,7 +68,11 @@ export class Client {
         console.log("Le client a déja 5 comptes")
     }
 
-    public getCompte(numero: string): Compte | null {
+    /**
+     * Récupére un compte à partir de son numéro.
+     * @param numero du compte a récupérer
+     */
+    public getCompte(numero: number): Compte | null {
         for (let i = 0; i < this.comptes.length; i++) {
             if(this.comptes[i].numero == numero){
                 return this.comptes[i]
